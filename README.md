@@ -2,7 +2,7 @@
 
 ### ReactJS + Redux
 
-[Space Web](https://space-mc7usmp3z-koope79.vercel.app)
+[Space Web](https://space-mzqoffji2-koope79.vercel.app)
 
 ## Описание логики
 
