@@ -6,7 +6,7 @@
     background: #F5F5F5;
     padding: 20px;
 }
-/* info */
+
 .info {
     width: 180px;
 }
@@ -23,7 +23,7 @@
     color: #3DBDF6;
 }
 
-/* download */
+
 .download {
     justify-self: center;
 }
@@ -37,6 +37,7 @@
 }
 
 .link_img {
+    margin-top: 5px;
     cursor: pointer;
     display: flex;
     grid-gap: 10px;
@@ -46,7 +47,7 @@
     max-width: 125px;
 }
 
-/* telephone */
+
 .telephone {
     justify-self: flex-end;
     width: 230px;
