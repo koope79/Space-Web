@@ -16,6 +16,7 @@ const initialState = {
 const tariffsReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_TARIFFS:
+            console.log('api');
             return {
                 ...state,
                 tariffs: action.tariffs,

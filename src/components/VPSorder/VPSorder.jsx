@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./VPSorder.scss";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -10,6 +10,7 @@ import Preloader from "../Preloader/Preloader";
 export const VPSorder = () => {
     const dispatch = useDispatch();
     const isFetching = useSelector(state => state.tariffs.isFetching);
+    const [currentActivityCard, setCurrentActivityCard] = useState(false);
 
     useEffect(() => {
         dispatch(getTariffsTh());
@@ -24,10 +25,10 @@ export const VPSorder = () => {
                 </div>
                 <div className="optionList__categories">
                     <p className="optionList__categories__title">Категория</p>
-                    <CategoryContainer />
+                    <CategoryContainer currentActivityCard={currentActivityCard} setCurrentActivityCard={setCurrentActivityCard}/>
                 </div>
             </div>
-            {isFetching ? <Preloader/> : <VPSPlanContainer />}
+            {isFetching ? <Preloader/> : <VPSPlanContainer currentActivityCard={currentActivityCard} setCurrentActivityCard={setCurrentActivityCard}/>}
         </div>
     );
 }
