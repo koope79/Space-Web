@@ -4,8 +4,8 @@ import arrow_down from "../../../assets/img/arrow_down.svg";
 import arrow_up from "../../../assets/img/arrow_up.svg";
 import classNames from "classnames";
 
-export const OptionList = ({data, activeOption, setOption, isDescription = false, currentActivityCard, setCurrentActivityCard}) => {
-    const [displayOptions, setDisplayOptions] = useState(false);
+export const OptionList = ({data, activeOption, setOption, isDescription = false, isShowSelector, setIsShowSelector}) => {
+    const [isDisplayOptions, setIsDisplayOptions] = useState(false);
 
     const options = data.map((op, index) => {
         const isActiveOption = op.id === activeOption.id;
@@ -17,18 +17,18 @@ export const OptionList = ({data, activeOption, setOption, isDescription = false
     });
 
     const switchOp = () => {
-        setCurrentActivityCard(prev => !prev);
-        setDisplayOptions((status) => !status);
+        setIsShowSelector(prev => !prev);
+        setIsDisplayOptions(status => !status);
     }
 
     return (
-        <div className="select_option" onClick={!displayOptions && !currentActivityCard ? () => switchOp() : displayOptions && currentActivityCard ? () => switchOp() : null}>
+        <div className="select_option" onClick={!isDisplayOptions && !isShowSelector ? () => switchOp() : isDisplayOptions && isShowSelector ? () => switchOp() : null}>
             <p className="option_title">
                 {isDescription ? activeOption.description : activeOption.name}
             </p>
-            <img className="arrow_icon" src={!displayOptions ? arrow_down : arrow_up} alt="-"/>
+            <img className="arrow_icon" src={!isDisplayOptions ? arrow_down : arrow_up} alt="-"/>
 
-            <div className={classNames("option", {"option_active": displayOptions}) }>
+            <div className={classNames("option", {"option_active": isDisplayOptions}) }>
                 {options}
             </div>
 

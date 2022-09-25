@@ -4,9 +4,9 @@ import { useSelector } from "react-redux";
 import { VPSCard } from "../VPSCard/VPSCard";
 import { useState } from "react";
 
-export const VPSPlanContainer = ({currentActivityCard, setCurrentActivityCard}) => {
+export const VPSPlanContainer = ({isShowSelector, setIsShowSelector}) => {
     const vpsPlans = useSelector(state => state.tariffs.vpsPlans);
-    const plans = vpsPlans.map(i => <VPSCard key={i.id} data={i} currentActivityCard={currentActivityCard} setCurrentActivityCard={setCurrentActivityCard}/>);
+    const plans = vpsPlans.map(i => <VPSCard key={i.id} data={i} isShowSelector={isShowSelector} setIsShowSelector={setIsShowSelector}/>);
 
     return(
         <div className="VPS_planContainer">

@@ -10,7 +10,7 @@ import Preloader from "../Preloader/Preloader";
 export const VPSorder = () => {
     const dispatch = useDispatch();
     const isFetching = useSelector(state => state.tariffs.isFetching);
-    const [currentActivityCard, setCurrentActivityCard] = useState(false);
+    const [isShowSelector, setIsShowSelector] = useState(false);
 
     useEffect(() => {
         dispatch(getTariffsTh());
@@ -25,10 +25,10 @@ export const VPSorder = () => {
                 </div>
                 <div className="optionList__categories">
                     <p className="optionList__categories__title">Категория</p>
-                    <CategoryContainer currentActivityCard={currentActivityCard} setCurrentActivityCard={setCurrentActivityCard}/>
+                    <CategoryContainer isShowSelector={isShowSelector} setIsShowSelector={setIsShowSelector}/>
                 </div>
             </div>
-            {isFetching ? <Preloader/> : <VPSPlanContainer currentActivityCard={currentActivityCard} setCurrentActivityCard={setCurrentActivityCard}/>}
+            {isFetching ? <Preloader/> : <VPSPlanContainer isShowSelector={isShowSelector} setIsShowSelector={setIsShowSelector}/>}
         </div>
     );
 }

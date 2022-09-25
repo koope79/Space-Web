@@ -8,8 +8,8 @@ import { OptionList } from "../OptionList/OptionList";
 import { useSelector } from "react-redux";
 import classNames from "classnames";
 
-export const VPSCard = ({ data, currentActivityCard, setCurrentActivityCard }) => {
-    const [clickedButton, setClickedButton] = useState(false);
+export const VPSCard = ({ data, isShowSelector, setIsShowSelector }) => {
+    const [isClickedButton, setIsClickedButton] = useState(false);
 
     const selectOs = useSelector(state => state.tariffs.selectOs);
     const selectPanel = useSelector(state => state.tariffs.selectPanel);
@@ -70,11 +70,11 @@ export const VPSCard = ({ data, currentActivityCard, setCurrentActivityCard }) =
 
                 <div className="optionBlock">
                     <p className="optionBlock__title">Дистрибутив</p>
-                    <OptionList data={selectOs} activeOption={activeOptionDistr} setOption={filtered} isDescription={true} currentActivityCard={currentActivityCard} setCurrentActivityCard={setCurrentActivityCard}/>
+                    <OptionList data={selectOs} activeOption={activeOptionDistr} setOption={filtered} isDescription={true} isShowSelector={isShowSelector} setIsShowSelector={setIsShowSelector}/>
                 </div>
                 <div className="optionBlock">
                     <p className="optionBlock__title">Программное обеспечение</p>
-                    <OptionList data={validDataPanel.length > 0 ? validDataPanel : selectPanel} activeOption={activeOptionSoft} setOption={setActiveOptionSoft} isDescription={true} currentActivityCard={currentActivityCard} setCurrentActivityCard={setCurrentActivityCard}/>
+                    <OptionList data={validDataPanel.length > 0 ? validDataPanel : selectPanel} activeOption={activeOptionSoft} setOption={setActiveOptionSoft} isDescription={true} isShowSelector={isShowSelector} setIsShowSelector={setIsShowSelector}/>
                 </div>
 
                 <div className="optionBlock">
@@ -96,7 +96,7 @@ export const VPSCard = ({ data, currentActivityCard, setCurrentActivityCard }) =
                 </div>
             </div>
 
-            <button className={classNames("orderButton", {"orderButton_active": clickedButton})} onClick={() => setClickedButton((prev) => !prev)}>Заказать</button>
+            <button className={classNames("orderButton", {"orderButton_active": isClickedButton})} onClick={() => setIsClickedButton((prev) => !prev)}>Заказать</button>
         </div>
     );
 }

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setVpsPlans } from "../../../redux/Tariffs-reducer";
 import { OptionList } from "../OptionList/OptionList";
 
-export const CategoryContainer = React.memo(({currentActivityCard, setCurrentActivityCard}) => {
+export const CategoryContainer = React.memo(({isShowSelector, setIsShowSelector}) => {
     const dispatch = useDispatch();
     const categories = useSelector(state => state.tariffs.categories);
 
@@ -18,7 +18,7 @@ export const CategoryContainer = React.memo(({currentActivityCard, setCurrentAct
 
     return (
         <>
-            <OptionList data={validCategories} activeOption={activeOption} setOption={selectedVpsPlan} currentActivityCard={currentActivityCard} setCurrentActivityCard={setCurrentActivityCard}/>
+            <OptionList data={validCategories} activeOption={activeOption} setOption={selectedVpsPlan} isShowSelector={isShowSelector} setIsShowSelector={setIsShowSelector}/>
         </>
     );
 });
