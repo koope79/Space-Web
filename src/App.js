@@ -1,25 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import { Provider } from 'react-redux';
+import { Routes, Route, Navigate, BrowserRouter } from "react-router-dom";
+import store from './redux/redux-store';
+import { Footer } from './components/Footer/Footer';
+import { NavBar } from './components/NavBar/NavBar';
+import { VPSorder } from './components/VPSorder/VPSorder';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-wrapper">
+      <NavBar>
+        <Routes>
+          <Route path="/" element={<Navigate replace to="/order" />} />
+          <Route path='/order' element={<VPSorder />}/>
+          <Route path='*' element={<VPSorder />} />
+        </Routes>
+      </NavBar>
+      <Footer />
     </div>
   );
 }
 
-export default App;
+
+const AppContainer = () => {
+  return (
+    <BrowserRouter>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </BrowserRouter>
+  );
+}
+
+export default AppContainer;

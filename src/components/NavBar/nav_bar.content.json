@@ -1,0 +1,88 @@
+[
+    {
+        "path": "/order",
+        "title": "ЗАКАЗАТЬ VPS",
+        "img": "icon_vps.svg",
+        "content": []
+    },
+    {
+        "path": "/account",
+        "title": "АККАУНТ",
+        "img": "icon_account.svg",
+        "content": [
+            {
+                "title": "Профиль",
+                "img": "icon_account_profile.svg"
+            },
+            {
+                "title": "Финансы",
+                "img": "icon_account_finance.svg"
+            },
+            {
+                "title": "Услуги",
+                "img": "icon_account_uslugi.svg"
+            }
+        ]
+    },
+    {
+        "path": "/sever",
+        "title": "СЕРВЕРЫ",
+        "img": "icon_server.svg",
+        "content": []
+    },
+    {
+        "path": "/monitoring",
+        "title": "МОНИТОРИНГ",
+        "img": "icon_monitoring.svg",
+        "content": []
+    },
+    {
+        "path": "/domens",
+        "title": "ДОМЕНЫ",
+        "img": "icon_domens.svg",
+        "content": [
+            {
+                "title": "Мои домены",
+                "img": "icon_domens_my.svg"
+            },
+            {
+                "title": "Доменные бонусы",
+                "img": "icon_domens_bonus.svg"
+            },
+            {
+                "title": "Доменные персоны",
+                "img": "icon_domens_persons.svg"
+            }
+        ]
+    },
+    {
+        "path": "/ssl",
+        "title": "SSL",
+        "img": "icon_ssl.svg",
+        "content": []
+    },
+    {
+        "path": "/magazine",
+        "title": "МАГАЗИН",
+        "img": "icon_magazine.svg",
+        "content": []
+    },
+    {
+        "path": "/seo",
+        "title": "SEO И РЕКЛАМА",
+        "img": "icon_seo.svg",
+        "content": []
+    },
+    {
+        "path": "/support",
+        "title": "ПОДДЕРЖКА",
+        "img": "icon_support.svg",
+        "content": []
+    },
+    {
+        "path": "/idea",
+        "title": "ЕСТЬ ИДЕЯ",
+        "img": "icon_idea.svg",
+        "content": []
+    }
+]
