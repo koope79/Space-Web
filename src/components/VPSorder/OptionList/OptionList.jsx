@@ -3,9 +3,14 @@ import "./OptionList.scss";
 import arrow_down from "../../../assets/img/arrow_down.svg";
 import arrow_up from "../../../assets/img/arrow_up.svg";
 import classNames from "classnames";
+import { useContext } from "react";
+import { isShowSelectorContext } from "../VPSorder";
 
-export const OptionList = ({data, activeOption, setOption, isDescription = false, isShowSelector, setIsShowSelector}) => {
+export const OptionList = ({data, activeOption, setOption, isDescription = false}) => {
     const [isDisplayOptions, setIsDisplayOptions] = useState(false);
+
+    const {["isShowSelector"]: [isShowSelector, setIsShowSelector]} = useContext(isShowSelectorContext);
+    
 
     const options = data.map((op, index) => {
         const isActiveOption = op.id === activeOption.id;

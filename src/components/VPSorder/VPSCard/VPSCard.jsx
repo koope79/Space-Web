@@ -8,7 +8,7 @@ import { OptionList } from "../OptionList/OptionList";
 import { useSelector } from "react-redux";
 import classNames from "classnames";
 
-export const VPSCard = ({ data, isShowSelector, setIsShowSelector }) => {
+export const VPSCard = ({ data }) => {
     const [isClickedButton, setIsClickedButton] = useState(false);
 
     const selectOs = useSelector(state => state.tariffs.selectOs);
@@ -70,11 +70,11 @@ export const VPSCard = ({ data, isShowSelector, setIsShowSelector }) => {
 
                 <div className="optionBlock">
                     <p className="optionBlock__title">Дистрибутив</p>
-                    <OptionList data={selectOs} activeOption={activeOptionDistr} setOption={filtered} isDescription={true} isShowSelector={isShowSelector} setIsShowSelector={setIsShowSelector}/>
+                    <OptionList data={selectOs} activeOption={activeOptionDistr} setOption={filtered} isDescription={true}/>
                 </div>
                 <div className="optionBlock">
                     <p className="optionBlock__title">Программное обеспечение</p>
-                    <OptionList data={validDataPanel.length > 0 ? validDataPanel : selectPanel} activeOption={activeOptionSoft} setOption={setActiveOptionSoft} isDescription={true} isShowSelector={isShowSelector} setIsShowSelector={setIsShowSelector}/>
+                    <OptionList data={validDataPanel.length > 0 ? validDataPanel : selectPanel} activeOption={activeOptionSoft} setOption={setActiveOptionSoft} isDescription={true}/>
                 </div>
 
                 <div className="optionBlock">
