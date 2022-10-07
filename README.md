@@ -2,8 +2,6 @@
 
 ### ReactJS + Redux
 
-[Space Web](https://space-mzqoffji2-koope79.vercel.app)
-
 ## Описание логики
 
 Список категорий в выпадающем списке:
