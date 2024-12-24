@@ -1,55 +1,56 @@
 .VPS_wrapper {
-    background-color: #FFFFFF;
-    box-shadow: 1px 1px 4px #E3E9EC;
-    margin: 0 20px 20px 20px;
-    padding: 17px 20px 30px;
+  background-color: #FFFFFF;
+  box-shadow: 1px 1px 4px #E3E9EC;
+  margin: 0 20px 20px 20px;
+  padding: 17px 20px 30px;
 
-    .top_content{
-        position: relative;
-    }
+  .top_content {
+    position: relative;
+  }
 }
 
 .top_desc {
-    border-bottom: 2px solid #F7FAFB;
+  border-bottom: 2px solid #F7FAFB;
+  color: #062436;
+
+  .top_desc__account {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+  }
+
+  .top_desc__order {
+    padding-top: 11px;
+    padding-bottom: 15px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
     color: #062436;
-
-    .top_desc__account {
-        font-weight: 300;
-        font-size: 12px;
-        line-height: 15px;
-        text-transform: uppercase;
-    }
-
-    .top_desc__order {
-        padding-top: 11px;
-        padding-bottom: 15px;
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 24px;
-        text-transform: uppercase;
-        color: #062436;
-    }
+  }
 }
 
 .optionList__categories {
-    width: 232px;
-    padding-top: 15px;
+  width: 232px;
+  padding-top: 15px;
 
-    .optionList__categories__title {
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 15px;
-        color: #7A8185;
-        margin-bottom: 12px;
-    }
+  .optionList__categories__title {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #7A8185;
+    margin-bottom: 12px;
+  }
 }
 
 
 @media screen and (max-width: 768px) {
-    .VPS_wrapper {
-        margin: 0;
-    }
-    .optionList__categories{
-        width: 100%;
-    }
+  .VPS_wrapper {
+    margin: 0;
+  }
+
+  .optionList__categories {
+    width: 100%;
+  }
 }

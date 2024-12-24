@@ -1,83 +1,84 @@
 .footer {
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    grid-gap: 20px;
-    background: #F5F5F5;
-    padding: 20px;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-gap: 20px;
+  background: #F5F5F5;
+  padding: 20px;
 }
 
 .info {
-    width: 180px;
+  width: 180px;
 }
 
 .info p {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 15px;
-    color: #000000;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000000;
 }
 
 .info p span {
-    cursor: pointer;
-    color: #3DBDF6;
+  cursor: pointer;
+  color: #3DBDF6;
 }
 
 
 .download {
-    justify-self: center;
+  justify-self: center;
 }
 
 .download p {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 15px;
-    color: #000000;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000000;
 }
 
 .link_img {
-    margin-top: 5px;
-    cursor: pointer;
-    display: flex;
-    grid-gap: 10px;
+  margin-top: 5px;
+  cursor: pointer;
+  display: flex;
+  grid-gap: 10px;
 }
 
 .link_img img {
-    max-width: 125px;
+  max-width: 125px;
 }
 
 
 .telephone {
-    justify-self: flex-end;
-    width: 230px;
-    display: flex;
-    flex-direction: column;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 15px;
-    color: #3DBDF6;
+  justify-self: flex-end;
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #3DBDF6;
 }
 
 .telephone a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .telephone a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .telephone a span {
-    color: #000000;
+  color: #000000;
 }
 
 
 @media screen and (max-width: 800px) {
-    .telephone {
-            justify-self: flex-start;
-    }
-    .download {
-            justify-self: flex-start;
-    }
+  .telephone {
+    justify-self: flex-start;
+  }
+
+  .download {
+    justify-self: flex-start;
+  }
 }

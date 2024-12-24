@@ -1,12 +1,10 @@
-import {applyMiddleware, combineReducers, createStore} from "redux";
+import { applyMiddleware, combineReducers, createStore } from "redux";
 import thunkMiddleware from 'redux-thunk';
 import { compose } from "redux";
 import tariffsReducer from "./Tariffs-reducer";
 
-
-
 let reducersStuff = combineReducers({
-    tariffs: tariffsReducer
+    tariffs: tariffsReducer,
 });
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
